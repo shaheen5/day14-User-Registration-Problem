@@ -49,8 +49,8 @@ fi
 #check password
 echo -e "\n"
 read -p "Enter Password : " password
-pass_pattern="^[a-z]*(?=.*[A-Z]).{8,}$" #minimum 8 characters and should have atleast 1 uppercase character
-if [[ $password =~ $pass_pattern ]]
+pass_pattern="^[a-z]*(?=.*[A-Z])(?=.*\d).{8,}$" #minimum 8 characters and should have atleast 1 uppercase character &
+if [[ $password =~ $pass_pattern ]]		#password should contain atleast 1 digit
 then
         echo "Valid Password!"
 else
