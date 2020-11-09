@@ -44,3 +44,15 @@ then
 else
         echo "Invalid Contact number!"
 fi
+
+
+#check password
+echo -e "\n"
+read -p "Enter Password : " password
+pass_pattern="^[a-zA-Z]{8,}$" #minimum 8 characters
+if [[ $password =~ $pass_pattern ]]
+then
+        echo "Valid Password!"
+else
+        echo "Invalid Password!"
+fi
