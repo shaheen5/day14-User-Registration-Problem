@@ -32,3 +32,15 @@ then
 else
         echo "Invalid Email Id!"
 fi
+
+
+#check contact details (Starting with 91,space,10 digits)
+echo -e "\n"
+read -p "Enter Contact Number : " input_contact
+contact_pattern="^(91)\s[6-9]{1}[0-9]{9}$"
+if [[ $input_contact =~ $contact_pattern ]]
+then
+        echo "Valid Contact number!"
+else
+        echo "Invalid Contact number!"
+fi
