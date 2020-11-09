@@ -11,3 +11,13 @@ then
 else
         echo "Invalid First name!"
 fi
+
+#check last name (Starting with capital and has min 3 characters)
+echo -e "\n"
+read -p "Enter Last Name : " last_name
+if [[ $last_name =~ $username_pattern ]]
+then
+        echo "Valid Last name!"
+else
+        echo "Invalid Last name!"
+fi
